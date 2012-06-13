@@ -1,0 +1,5 @@
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)(\.gz)?$">
+Header set Expires "Mon, 01 Oct 2012 20:00:00 GMT"
+Header unset ETag
+FileETag None
+</FilesMatch>
