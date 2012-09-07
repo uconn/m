@@ -1,0 +1,6 @@
+
+#  Exclude all web crawlers from scanning this site.
+User-agent: *
+Disallow: /
+User-agent: Googlebot-Image
+Disallow: /

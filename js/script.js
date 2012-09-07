@@ -67,4 +67,8 @@ $(document).ready(function(){
 	
 	$('.android #footer-main').prepend(' <p class="app_alert">For quick access from your Android device, add this page as a bookmark, then open your Bookmarks Menu, long-press the UConn Mobile bookmark, and select "Add to Home Screen."</p>');
 	
+	$('head').append(
+	'<script language="javascript" type="text/javascript" src="http://alert.uconn.edu/alert.js"></script>'
+	);
+	
 });
