@@ -86,15 +86,14 @@
 		<div>
          	<h3><span class="icon-small icon-emergency-small"></span>Closings &amp; Emergency Info</h3>
             
-<div id="messageWrap">
-	<h4>Today:</h4>
-    <div id="messageFeed">
-    
-    </div>
-</div>
+          <p>This page advises the University of Connecticut community regarding weather-related closings.</p>
             
-<p>This page advises the University of Connecticut community regarding weather-related closings.</p>
-<p>For non-weather-related emergencies at any campus other than the UConn Health Center, please go to the Alert Notification System website. For non-weather-related emergencies at the UConn Health Center, go to the Health Center's Alert Notification System website.</p>
+            <ul class="listview">
+              <li><a class="external" href="http://alert.uconn.edu/">View the current Alert Status</a></li>
+            </ul>
+            
+
+<p>For non-weather-related emergencies at the UConn Health Center, go to the Health Center's Alert Notification System website.</p>
 
 <h4>Campus contact information for weather-related closings:</h4>
 <ul>
@@ -137,30 +136,6 @@ For emergency closing policy and procedures, please see the <a href="http://www.
     MBP.scaleFix();
 	MBP.hideUrlBar();
   </script>
-  
-  <script>
-    $(document).ready(function(){
-		
-		var seed = new Date().getTime();
-		seed = (seed*9301+49297) % 233280;
-		
-        var rand_no = seed/(233280.0);
-        var feed = "http://today.uconn.edu/feed/?s=Emergency%20Closings&r="+rand_no;
-        
-        
-        $("#messageFeed").loadFeed(feed,{
-            customHandler:function(item,container,settings){
-				console.log(item.link);
-                wrapper = $("<div />");
-                if(item.link == "http://today.uconn.edu/resources/emergency-closings/"){
-                    $(wrapper).html(item.content).appendTo(container);
-					console.log(item.content);
-                }
-            }
-        });
-    
-    });
-   </script>
   
   
 </body>
